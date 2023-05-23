@@ -39,6 +39,9 @@
                             </td>
                             <td class="align-middle">
                                 <b><?= $dd->nama_santri ?></b>
+                                <button class="btn btn-xs btn-default px-2">
+                                    <i class="fas fa-copy"></i>
+                                </button>
                                 <br>
                                 <small>
                                     <?= $dd->desa_santri . ', ' . $kab ?>

@@ -1,65 +1,65 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header pt-1">
-    </div>
-    <!-- /.content-header -->
+	<!-- Content Header (Page header) -->
+	<div class="content-header pt-1">
+	</div>
+	<!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card card-default">
-                        <div class="card-header py-2 pr-2">
-                            <h3 class="card-title mt-1"> <i class="fas fa-stamp"></i> Perizinan</h3>
-                            <button type="submit" class="btn btn-success btn-sm px-5 float-right ml-2" data-toggle="modal" data-target="#modal-lg">
-                                <i class="fas fa-plus-circle"></i> Tambah
-                            </button>
+	<!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+			<!-- Small boxes (Stat box) -->
+			<div class="row">
+				<div class="col-12">
+					<div class="card card-default">
+						<div class="card-header py-2 pr-2">
+							<h3 class="card-title mt-1"> <i class="fas fa-stamp"></i> Perizinan</h3>
+							<button type="submit" class="btn btn-success btn-sm px-5 float-right ml-2" data-toggle="modal" data-target="#modal-lg">
+								<i class="fas fa-plus-circle"></i> Tambah
+							</button>
 							<button type="submit" class="btn btn-default btn-sm px-4 ml-2 float-right" data-toggle="modal" data-target="#modal-proses">
 								<i class="fas fa-file-alt"></i> Surat
 							</button>
-                            <button type="submit" class="btn btn-default btn-sm px-4 float-right" data-toggle="modal" data-target="#modal-kembali">
-                                <i class="fas fa-arrow-alt-circle-down"></i> Kembali
-                            </button>
-                            <select onchange="loaddata()" id="bulan" class="form-control form-control-sm d-inline-block float-right mr-2" style="width: 130px;">
-                                <option value="">Semua Bulan</option>
-                                <option value="01">Muharram</option>
-                                <option value="02">Shafar</option>
-                                <option value="03">Rabi'ul Awal</option>
-                                <option value="04">Rabi'ul Tsani</option>
-                                <option value="05">Jumadal Ula</option>
-                                <option value="06">Jumadal Akhirah</option>
-                                <option value="07">Rajab</option>
-                                <option value="08">Sya'ban</option>
-                                <option value="09">Ramadhan</option>
-                                <option value="10">Syawal</option>
-                                <option value="11">Dzul Qo'dah</option>
-                                <option value="12">Dzul Hijjah</option>
-                            </select>
-                            <select onchange="loaddata()" class="form-control form-control-sm float-right mr-2" id="status" style="width: 130px">
-                                <option value="">..:Pilih Status:..</option>
-                                <option value="0">Pengajuan</option>
-                                <option value="1">Aktif</option>
-                                <option value="2">Kembali</option>
-                            </select>
-                            <input type="text" onkeyup="loaddata()" class="form-control form-control-sm mr-2 float-right" id="nama" autofocus autocomplete="off" placeholder="Cari nama santri" style="width: 220px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12" id="tampil-data-perizinan">
+							<button type="submit" class="btn btn-default btn-sm px-4 float-right" data-toggle="modal" data-target="#modal-kembali">
+								<i class="fas fa-arrow-alt-circle-down"></i> Kembali
+							</button>
+							<select onchange="loaddata()" id="bulan" class="form-control form-control-sm d-inline-block float-right mr-2" style="width: 130px;">
+								<option value="">Semua Bulan</option>
+								<option value="01">Muharram</option>
+								<option value="02">Shafar</option>
+								<option value="03">Rabi'ul Awal</option>
+								<option value="04">Rabi'ul Tsani</option>
+								<option value="05">Jumadal Ula</option>
+								<option value="06">Jumadal Akhirah</option>
+								<option value="07">Rajab</option>
+								<option value="08">Sya'ban</option>
+								<option value="09">Ramadhan</option>
+								<option value="10">Syawal</option>
+								<option value="11">Dzul Qo'dah</option>
+								<option value="12">Dzul Hijjah</option>
+							</select>
+							<select onchange="loaddata()" class="form-control form-control-sm float-right mr-2" id="status" style="width: 130px">
+								<option value="">..:Pilih Status:..</option>
+								<option value="0">Pengajuan</option>
+								<option value="1">Aktif</option>
+								<option value="2">Kembali</option>
+							</select>
+							<input type="text" onkeyup="loaddata()" class="form-control form-control-sm mr-2 float-right" id="nama" autofocus autocomplete="off" placeholder="Cari nama santri" style="width: 220px">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12" id="tampil-data-perizinan">
 
-                </div>
-            </div>
+				</div>
+			</div>
 
-            <!-- /.row -->
-            <!-- /.row (main row) -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+			<!-- /.row -->
+			<!-- /.row (main row) -->
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 
@@ -147,10 +147,10 @@
 												<option value="">---</option>
 												<?php
 												for ($i = 1; $i < 31; $i++) {
-													?>
+												?>
 													<option value="<?= sprintf('%02d', $i) ?>"><?= sprintf('%02d', $i) ?>
 													</option>
-													<?php
+												<?php
 												}
 												?>
 											</select>
@@ -160,22 +160,22 @@
 												<option value="">..::..</option>
 												<?php
 												$bulan = [
-														1 => 'Muharram',
-														'Shafar',
-														'Rabi\'ul Awal',
-														'Rabi\'ul Tsani',
-														'Jumadal Ula',
-														'Jumadal Akhirah',
-														'Rajab',
-														'Sya\'ban',
-														'Ramadhan',
-														'Syawal',
-														'Dzul Qo\'dah',
-														'Dzul Hijjah'
+													1 => 'Muharram',
+													'Shafar',
+													'Rabi\'ul Awal',
+													'Rabi\'ul Tsani',
+													'Jumadal Ula',
+													'Jumadal Akhirah',
+													'Rajab',
+													'Sya\'ban',
+													'Ramadhan',
+													'Syawal',
+													'Dzul Qo\'dah',
+													'Dzul Hijjah'
 												];
 												$k = 1;
 												for ($p = 1; $p <= 12; $p++) {
-													?>
+												?>
 													<option value="<?= sprintf('%02d', $p); ?>">
 														<?= $bulan[$p]; ?>
 													</option>
@@ -189,7 +189,7 @@
 												<?php
 												$sekarang = 1445;
 												for ($b = 1444; $b <= $sekarang; $b++) {
-													?>
+												?>
 													<option value="<?= $b; ?>"><?= $b; ?></option>
 												<?php } ?>
 											</select>
@@ -235,7 +235,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-8" id="tampil-tanggal-kembali-perizinan">
+								<div class="col-8" id="tampil-tanggal-kembali-perizinan" style="display: none;">
 									<div class="row">
 										<div class="col-12">
 											<div class="form-group row mb-1">
@@ -245,10 +245,10 @@
 														<option value="">---</option>
 														<?php
 														for ($i = 1; $i <= 31; $i++) {
-															?>
+														?>
 															<option value="<?= sprintf('%02d', $i) ?>"><?= sprintf('%02d', $i) ?>
 															</option>
-															<?php
+														<?php
 														}
 														?>
 													</select>
@@ -258,22 +258,22 @@
 														<option value="">..::..</option>
 														<?php
 														$bulan = [
-																1 =>
-																		'Januari',
-																'Februari',
-																'Maret',
-																'April',
-																'Mei',
-																'Juni',
-																'Juli',
-																'Agustus',
-																'September',
-																'Oktober',
-																'November',
-																'Desember'
+															1 =>
+															'Januari',
+															'Februari',
+															'Maret',
+															'April',
+															'Mei',
+															'Juni',
+															'Juli',
+															'Agustus',
+															'September',
+															'Oktober',
+															'November',
+															'Desember'
 														];
 														for ($p = 1; $p <= 12; $p++) {
-															?>
+														?>
 															<option value="<?= sprintf('%02d', $p) ?>">
 																<?= $bulan[$p] ?>
 															</option>
@@ -287,7 +287,7 @@
 														<?php
 														$sekarang = date('Y');
 														for ($b = 2022; $b <= $sekarang; $b++) {
-															?>
+														?>
 															<option value="<?= $b; ?>"><?= $b; ?></option>
 														<?php } ?>
 													</select>

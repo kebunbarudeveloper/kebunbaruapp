@@ -59,12 +59,12 @@
     $sekolah = $data->tingkat_formal;
     if ($tipe == 1) {
         $ketua = 'LUTHFI MASYHURI';
-		$kesehatan = 'SUDI YADI, M.Pd.';
-		$keamanan = 'MOH. MOHLAS';
+        $kesehatan = 'SUDI YADI, M.Pd.';
+        $keamanan = 'MOH. MOHLAS';
     } else {
         $ketua = 'RISKIYAH, S.Pd.I';
-		$kesehatan = 'SUDI YADI, M.Pd.';
-		$keamanan = 'MOH. MOHLAS';
+        $kesehatan = 'SUDI YADI, M.Pd.';
+        $keamanan = 'MOH. MOHLAS';
     }
     ?>
 
@@ -77,53 +77,53 @@
         <div class="divisi">
             <p>Diberikan kepada :</p>
             <table border="0" width="100%" style="margin-left: 50px">
-                    <tr style="font-weight: bold">
-                        <td style="height: 30px">Nama</td>
-                        <td>:</td>
-                        <td><?= $data->nama_santri ?></td>
-                    </tr>
-                    <tr>
-                        <td style="height: 30px">ID P2K</td>
-                        <td>:</td>
-                        <td><?= $data->id_santri ?></td>
-                    </tr>
-                    <tr>
-                        <td style="height: 30px">Nomor Induk</td>
-                        <td>:</td>
-                        <td><?= $data->induk_santri ?></td>
-                    </tr>
-                    <tr>
-                        <td style="height: 30px">Tempat/Tanggal Lahir</td>
-                        <td>:</td>
-                        <td><?= $data->tempat_lahir_santri . ', ' . $this->baseModel->TampilMasehi($data->tanggal_lahir_santri) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="vertical-align: top; height: 30px">Alamat</td>
-                        <td style="vertical-align: top;">:</td>
-                        <td><?= $data->desa_santri . ' ' . $data->kecamatan_santri . ' ' . str_replace(['Kabupaten', 'Kota '], '', $data->kabupaten_santri) . ' ' . $data->provinsi_santri . ', ' . $data->kode_pos_santri; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="height: 30px">Pendidikan Diniyah</td>
-                        <td>:</td>
-                        <td><?= $data->kelas_diniyah . ', ' . $data->tingkat_diniyah ?></td>
-                    </tr>
-                    <tr>
-                        <td style="height: 30px">Pendidikan Formal</td>
-                        <td>:</td>
-                        <td><?= $data->kelas_formal . ', ' . $data->tingkat_formal ?></td>
-                    </tr>
-					<tr style="font-weight: bold; height: 30px">
-						<td><?= ($data->alasan == 'Sakit') ? 'Dikarenakan' : 'Keperluan' ?></td>
-						<td>:</td>
-						<td><?= @$data->alasan ?></td>
-					</tr>
-					<tr>
-						<td style="height: 30px">Berlaku s.d. tanggal</td>
-						<td>:</td>
-						<td>___________________________________________________ ( ____ hari )</td>
-					</tr>
+                <tr style="font-weight: bold">
+                    <td style="height: 30px">Nama</td>
+                    <td>:</td>
+                    <td><?= $data->nama_santri ?></td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">ID P2K</td>
+                    <td>:</td>
+                    <td><?= $data->id_santri ?></td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">Nomor Induk</td>
+                    <td>:</td>
+                    <td><?= $data->induk_santri ?></td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">Tempat/Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><?= $data->tempat_lahir_santri . ', ' . $this->baseModel->TampilMasehi($data->tanggal_lahir_santri) ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; height: 30px">Alamat</td>
+                    <td style="vertical-align: top;">:</td>
+                    <td><?= $data->desa_santri . ' ' . $data->kecamatan_santri . ' ' . str_replace(['Kabupaten', 'Kota '], '', $data->kabupaten_santri) . ' ' . $data->provinsi_santri . ', ' . $data->kode_pos_santri; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">Pendidikan Diniyah</td>
+                    <td>:</td>
+                    <td><?= $data->kelas_diniyah . ', ' . $data->tingkat_diniyah ?></td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">Pendidikan Formal</td>
+                    <td>:</td>
+                    <td><?= $data->kelas_formal . ', ' . $data->tingkat_formal ?></td>
+                </tr>
+                <tr style="font-weight: bold; height: 30px">
+                    <td><?= ($data->alasan == 'Sakit') ? 'Dikarenakan' : 'Keperluan' ?></td>
+                    <td>:</td>
+                    <td><?= @$data->alasan ?></td>
+                </tr>
+                <tr>
+                    <td style="height: 30px">Berlaku s.d. tanggal</td>
+                    <td>:</td>
+                    <td>___________________________________________________ ( ____ hari )</td>
+                </tr>
                 </tbody>
             </table>
             <p>Demikian, agar dipergunakan sebagaimana mestinya.</p>
@@ -143,7 +143,7 @@
                             <b><u><?= ($alasan == 'Sakit') ? $kesehatan : $keamanan ?></u></b>
                         </td>
                         <td style="vertical-align: bottom;">
-							<b><u><?= $ketua; ?></u></b>
+                            <b><u><?= $ketua; ?></u></b>
                         </td>
                     </tr>
                     <tr>
@@ -169,22 +169,22 @@
                 </tbody>
             </table>
         </div>
-		<div>
-			<div>
-				<?= $barcode ?>
-			</div>
-			<div style="margin-top: 220px">
-				<i>No. Reg. <?= $data->id ?></i>
-			</div>
-		</div>
+        <div>
+            <div>
+                <?= $barcode ?>
+            </div>
+            <div style="margin-top: 220px">
+                <i>No. Reg. <?= $data->id ?></i>
+            </div>
+        </div>
     </div>
 
-    <!-- <script>
+    <script>
         window.print()
         setTimeout(function() {
             window.close()
         }, 2000);
-    </script> -->
+    </script>
 </body>
 
 </html>

@@ -1,15 +1,15 @@
 <?php
 if ($data) {
-	$avatarPath = FCPATH . 'assets/fotosantri/' .$data->tipe_santri.'/'. $data->id_santri . '.jpg';
+	$avatarPath = FCPATH . 'assets/fotosantri/' . $data->tipe_santri . '/' . $data->id_santri . '.jpg';
 
 	if (file_exists($avatarPath) === FALSE || $avatarPath == NULL) {
-		$avatar = base_url('assets/fotosantri/'.$data->tipe_santri.'.jpg');
+		$avatar = base_url('assets/fotosantri/' . $data->tipe_santri . '.jpg');
 	} else {
-		$avatar = base_url('assets/avatars/' . $data->tipe_santri.'/'.$data->id_santri . '.jpg');
+		$avatar = base_url('assets/fotosantri/' . $data->tipe_santri . '/' . $data->id_santri . '.jpg');
 	}
 
 	$city = str_replace(['Kabupaten', 'Kota'], '', $data->kabupaten_santri);
-	?>
+?>
 	<div class="col-9">
 		<div class="callout callout-success py-1 px-3">
 			<b>DATA DIRI</b>
@@ -49,6 +49,6 @@ if ($data) {
 			</div>
 		</div>
 	</div>
-	<?php
+<?php
 }
 ?>
